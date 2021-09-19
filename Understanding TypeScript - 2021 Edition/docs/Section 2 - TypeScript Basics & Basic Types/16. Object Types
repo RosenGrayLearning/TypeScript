@@ -1,0 +1,30 @@
+- in js almost everything is an object (null, array etc...)
+- when performing typeof([]) - it returns an object 
+- in TS, more spesific types are possibile 
+- in TS, object types written almost like JS object, but instead of having key value paris (like in JS) - we have key type pairs
+ ****************************
+ const person = {
+     name:string;
+     age:number;
+ }
+ ****************************
+ - if we dont know why kind of types we will have in our object, we can be more jeneric - like this: 
+  ****************************
+ const person: object = {
+     name:string;
+     age:number;
+ }
+ 
+ - but we should be more spesific when we can. as the example above, will throw errors even if we will try to access to name property 
+   (which is exists)
+- so in order to make it more typed according to TS convention, we should write as following: 
+****************************
+const person : {
+    name:string;
+    age:number;
+} = {
+    name:'vladi',
+    age:33
+}
+****************************
+- but better syntax is as we wrote in our first example, as we do assign values to properties, so TS does the "Type inference" for us.

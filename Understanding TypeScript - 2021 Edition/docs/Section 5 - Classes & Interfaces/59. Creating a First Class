@@ -1,0 +1,15 @@
+class Person {
+    name:string = 'vladi';
+    age:number;
+    constructor(age,name = null){
+        this.name = name || this.name;
+        this.age = age;
+    }
+    callme(){
+        console.log(this)
+    }
+}
+
+const vladi = new Person(33);
+
+vladi.callme();

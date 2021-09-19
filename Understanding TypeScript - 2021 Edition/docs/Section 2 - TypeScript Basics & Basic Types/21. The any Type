@@ -1,0 +1,4 @@
+the "any" type - means that we can store it kind of value we would like.
+
+const name : any;
+const names : any[];

@@ -1,0 +1,5 @@
+typeof(3) //number
+typeof('3') //string
+typeof({}) //object
+typeof([]) // object
+typeof(false) // boolean

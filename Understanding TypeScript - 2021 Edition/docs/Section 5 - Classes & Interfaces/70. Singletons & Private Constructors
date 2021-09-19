@@ -1,0 +1,3 @@
+- creating private constructor
+- creating private static instance property;
+- creating private static method for assining our 'this' to an instance property

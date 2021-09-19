@@ -1,0 +1,11 @@
+Tuple - fixed length array ; this is not exists in JS, was added in TS (it does exists in many other langues)
+ - for example: 
+ ******************************
+ const tuple = [1,2]; 
+ const role = [2,author];
+******************************
+
+ const tuple:[number,number] = [1,2]; 
+ const role:[number,string] = [2,'author'];
+
+ - when we know how many items we would have in array, and what are their types - we might consider of using tuple instead of array

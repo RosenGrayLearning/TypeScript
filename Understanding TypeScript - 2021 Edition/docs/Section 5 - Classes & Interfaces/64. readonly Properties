@@ -1,0 +1,27 @@
+class Person {
+    readonly name:string;
+    public age:number;
+    public lastName:string;
+
+
+    constructor(name,age,lastName){
+        this.name = name;
+        this.age = age;
+        this.lastName = lastName;
+    }
+
+    sayHello(){
+        console.log(this);
+    }
+}
+
+
+const me = new Person('vladi',34,'iokhim');
+me.lastName = 'nano';
+me.name = 'ano;'; // cant overwrite as it is a readonly property
+
+me.sayHello();
+
+
+** unlike private, which can be changed or modified within the class , 
+private only cant even be accessed whithin the class itself"

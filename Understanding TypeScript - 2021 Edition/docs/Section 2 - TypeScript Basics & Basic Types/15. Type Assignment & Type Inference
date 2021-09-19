@@ -1,0 +1,12 @@
+- so far have used types when settings parameters; but we can also do this, while declaringn a variable - for example: 
+************************
+ let somenNumber:number = 5; 
+ ************************
+- that being said, we dont have to do that, as TypeScript has something that called: "Type inference", which basicly means that 
+  TS does this job for us behind the scenes.
+- but doing this, is not considered to be a good practise. 
+- we should do that only if we using variables not i a signed way - like this: 
+************************
+let someNumber:number;
+************************
+ then it is a good practise to tell TS which value will be later stored in this variable.

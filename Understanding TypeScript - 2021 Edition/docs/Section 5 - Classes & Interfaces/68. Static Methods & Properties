@@ -1,0 +1,34 @@
+class Person {
+ 
+     private static familyMembers : string[] = []
+
+    constructor(public name:string,public lastName:string,public age:number){
+
+    }
+
+    get getAge(){
+        return this.age;
+    }
+    
+    set setAge(age:number){
+        this.age = age;
+    }
+
+    public static addFamilyMemmber(familyMember) {
+        Person.familyMembers.push(familyMember);
+    }
+    public static showFamilyMemmber(){
+        console.log(Person.familyMembers)
+    }
+
+}
+
+const vladi = new Person('Vladi','Iokhim',33);
+const anna = new Person('Anna','Iokhim',34);
+
+Person.addFamilyMemmber('Olga');
+
+Person.showFamilyMemmber();
+
+console.log(vladi)
+console.log(anna)

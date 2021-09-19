@@ -1,0 +1,9 @@
+- like "void" , "never", is another type that functions can return.
+- for a function that never produces a value - for example a function which throws an error 
+- whenn an error being thrown, it crashes our code, and even if we will put a return statment after it, it will never reach it.
+
+************************************************************************
+function generateError(message:string,code:number) : never {
+    throw {message:message,errorCode:code};
+}
+************************************************************************

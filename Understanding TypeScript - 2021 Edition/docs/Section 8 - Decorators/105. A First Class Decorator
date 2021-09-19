@@ -1,0 +1,24 @@
+- in general, decorators, is all about classes.
+- decorator is a function, which we implay to 'something' - 
+  for example to a class, in a certain way;
+- convention is to start our decorator(function) name with a capital letter.
+- creating our decorator above our class (like in the following eXAMPLE)
+- ts passes 1 argument to our decorator, which is our constructor function
+- decorators are being executed when our class is defined, not when it is extensieted to a new instance
+
+
+        
+
+function Logger(Constructor:Constructor){
+    console.log(333)
+    console.log( Constructor)
+}
+
+@Logger
+class Person {
+        name: string = 'vladi';
+        constructor(){
+            console.log('creating person');
+        }
+    }
+    

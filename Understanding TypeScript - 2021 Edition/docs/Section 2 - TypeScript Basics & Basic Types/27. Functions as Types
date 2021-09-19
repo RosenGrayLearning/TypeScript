@@ -1,0 +1,17 @@
+- like boolean type, number type or string type, we can set a function type to a variable or param etc
+- like this (we are using Function with upper case, as lower case is a reserved word ofcourse to a function declaration)
+**************************************************
+function add(num1:number,num2:number):number{
+    return num1 + num2;
+}
+
+let someVariable:Function;
+
+someVariable = add;
+**************************************************
+
+- we can be even more specific, by saying that we can a specific function with specific params - by using *function types*
+- the syntax is "js arrow function like" (very similar)
+- so in order to set a function type which takes two params , which are numbers, and also return a number, we doing something like this: 
+
+let someVariable: (n1:number,n2:number) => number 

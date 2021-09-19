@@ -1,0 +1,4 @@
+the same goes with booleans types and strig types(As it went with numbers typing):
+function test(var1:boolean, var2:string){
+
+}

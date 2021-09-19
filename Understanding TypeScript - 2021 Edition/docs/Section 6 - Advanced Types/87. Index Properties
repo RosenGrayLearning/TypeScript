@@ -1,0 +1,10 @@
+in case we dont know why kind of properties we would have.
+
+interface ErrorContainer { // { email: 'Not a valid email', username: 'Must start with a character!' }
+  [prop: string]: string;
+}
+
+const errorBag: ErrorContainer = {
+  email: 'Not a valid email!',
+  username: 'Must start with a capital character!'
+};

@@ -1,0 +1,22 @@
+- our merge funnction has to arguments which both are objects
+- we merge them together, and while trying to access the name property , we receive an error (even thugh we know we have such property)
+- this is happens because typescript does not know what keys we have there, thats why we should provide additonal information in shape of generics 
+- <T,U> - can be anything, but the convention is to name the first generic T. and then typescript can read our type data
+
+function merge<T,U>(objA:T,objB:U){
+    return Object.assign(objA,objB);
+}
+
+const me = {
+    name:'vladi',
+    age:34
+}
+
+const her = {
+    nname:'anna',
+    aage:34
+}
+
+const mergeObj = merge(me,her);
+
+mergeObj.name;

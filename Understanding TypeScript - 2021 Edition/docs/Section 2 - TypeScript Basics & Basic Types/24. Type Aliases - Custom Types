@@ -1,0 +1,11 @@
+ - when working with union types, we might create a custom type which in the end, stores that union type.
+ - in TS, we can create something that called : Custom Types ( or Type Aliases)
+ - we create such Types with a "type" keyword 
+ ********************************************************************************
+type OneOrTwoSomething = "one-something" | "two something";
+
+let something : OneOrTwoSomething;
+
+something = 'one-something';
+
+************************************************************

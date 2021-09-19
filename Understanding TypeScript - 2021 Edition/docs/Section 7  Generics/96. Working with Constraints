@@ -1,0 +1,7 @@
+- following the previous example, we wont get an error if we will pass any other type then an object
+  as our written generic are basicly of type any.
+- in order to restrict it to a specific type, we can use constraints like so: 
+
+function merge<T extends object,U extends object>(objA:T,objB:U){
+    return Object.assign(objA,objB);
+}

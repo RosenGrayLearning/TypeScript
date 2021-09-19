@@ -1,0 +1,22 @@
+- decoratore factory is basicly a fuction that returns a decoratore, and by that 
+  allows us to configure our decoratore, by passing more arguments to it, 
+  or/and adding more logic 
+
+          
+
+function Logger(someValue:string){
+    //maybe some logic goes here
+    return function(Constructor:Function) {
+        console.log(someValue)
+        console.log( Constructor)
+    }
+}
+
+@Logger('hello there')
+class Person {
+        name: string = 'vladi';
+        constructor(){
+            console.log('creating person');
+        }
+    }
+    

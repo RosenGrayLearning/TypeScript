@@ -1,0 +1,26 @@
+- when class properties are private or protected,
+  we still can gain access to them, via setters and getters 
+- getter method has to return something
+- setter method has to accept something
+- access like a normal proeprty for both of them 
+class Person {
+    name:string = 'vladi';
+    lastName:string = 'Iokhim';
+    private age:number = 33;
+
+    get getAge(){
+        return this.age;
+    }
+    
+    set setAge(age:number){
+        this.age = age;
+    }
+
+}
+
+const me = new Person();
+
+//me.age = 34; // not accessibl outside of the class Person
+console.log('me',me)
+me.setAge = 34;
+console.log(me.getAge)

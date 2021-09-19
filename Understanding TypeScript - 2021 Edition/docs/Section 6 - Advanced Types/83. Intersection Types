@@ -1,0 +1,26 @@
+- combining two or more types together
+
+
+type Admin = {
+    name:string;
+    privileges:string[];
+}
+
+type Employee = {
+    name:string;
+    startDate:Date;
+}
+
+type SomeOther = {
+    age:number;
+}
+
+type ElevatedEmployee = Admin & Employee & SomeOther;
+
+
+const e1 : ElevatedEmployee = {
+    name:'vladi',
+    privileges:['bla','bla2'],
+    startDate:new Date(),
+    age:34
+}

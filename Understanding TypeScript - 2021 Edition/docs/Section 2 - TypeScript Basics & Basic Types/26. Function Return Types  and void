@@ -1,0 +1,19 @@
+- in order to set the return type to a function, we writing like this: 
+
+********************************************************
+function add(num1:number,num2:number) : number {
+    return num1+num2;
+}
+
+
+function add(input:string,input:string) : string {
+    return num1+num2;
+}
+
+********************************************************
+
+- if does not return anything, we set the void type 
+
+function add(num1:number,num2:number) : void {
+    console.log(num1)
+}

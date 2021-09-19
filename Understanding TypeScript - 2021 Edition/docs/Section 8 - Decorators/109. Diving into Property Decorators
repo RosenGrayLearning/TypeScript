@@ -1,0 +1,37 @@
+- in order to use decorators, we need a class, but we dont have to  
+  attach our decorators to the class itself
+- example of attaching decorator to a class property 
+  we get the prototype of our object as the first argument, and the property name as the second 
+
+*********************************************
+
+
+
+function Log(target:any,PropertyName:string){
+    console.log('property decorator');
+    console.log('target',target); // our class
+    console.log('PropertyName', PropertyName); // property name
+}
+
+class Product {
+    @Log
+    title:string;
+    private _price:number;
+    constructor(t:string,p:number){
+        this.title = t;
+        this._price = p;
+    }
+
+    set price(val:number){
+        if(val > 0){
+            this._price = val;
+        }else{
+            throw new Error('no no');
+        }
+    }
+    getPriceWithTax(tax:number) : number{
+        return this._price * (1 + tax);
+    }
+}
+
+***************************************************

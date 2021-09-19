@@ -1,0 +1,4 @@
+Prettier - Code formatter
+  - settings - format on save === true;
+- settings - Prettier: Single Quote
+- settings - tab size === 2;

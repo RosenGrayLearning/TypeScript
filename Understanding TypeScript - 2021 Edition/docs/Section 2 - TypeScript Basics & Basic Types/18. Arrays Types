@@ -1,0 +1,3 @@
+const arr = [1,2,3,]; // arr: number[]
+const arr = ['name','age']; // arr: string[]
+const arr = [] // arr: any[]

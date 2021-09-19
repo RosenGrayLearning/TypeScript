@@ -1,0 +1,3 @@
+1. Number - 1,5.3,-10 ; all numbers, no differentiation between integers and floats.
+2. String - all text valus (including even template literals)
+3. Boolean - true or false

@@ -1,0 +1,7 @@
+- when are not only saying that a variable or a certain parameter should hold a number or a string , but when we are very clear about the value it should hold.
+
+***************************************************************
+let something : "one-something" | "two something";
+
+something = 'one-something';
+*********************************************

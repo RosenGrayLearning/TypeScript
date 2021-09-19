@@ -1,0 +1,24 @@
+- and idea of having some global constants that we might working with in our app, which we want to represent as numbers, 
+but to whichwe want to asign a human readle lable
+- the convention is to set our Enums names as uppercase
+- enum Role {value,value,value} 
+**********************************
+enum Role {ADMIN, READ_ONLY, AUTHOR};
+**********************************
+
+- each value will have automatically a numeric value according to it order 
+console.log(Role.ADMIN) // 0
+console.log(Role.READ_ONLY) // 1
+console.log(Role.AUTHOR) // 2
+
+- it starts with 0, but we can assign any other starting point - like this: 
+**********************************
+enum Role {ADMIN = 5, READ_ONLY, AUTHOR};
+**********************************
+- as a result:
+console.log(Role.ADMIN) // 5
+console.log(Role.READ_ONLY) // 6
+console.log(Role.AUTHOR) // 7
+
+- we can assign numbers to any other enum values 
+- we can assign strings to them as well (or mix it)

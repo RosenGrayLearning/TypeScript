@@ -1,0 +1,22 @@
+- a factory decorater (very basic, but the main idea is the same) like angular uses :
+// @Logger('hello there')
+function withTemplate(template:string,hookid:string){
+    return (constructor:any) => {
+        const hookEl = document.getElementById(hookid);
+        const me = new constructor(); // new Person
+       
+        if(hookEl){
+            hookEl.innerHTML = template;
+            hookEl.querySelector('h1')!.textContent = me.name;
+        }
+    }
+}
+
+@withTemplate('<h1>bla</h1>','app') 
+class Person {
+        name: string = 'vladi';
+        constructor(){
+            console.log('creating person');
+        }
+    }
+    

@@ -1,0 +1,52 @@
+ - in order use a specific constructor in one of the children classes,
+   we shoud user a super() method and pass the relevant properties to it(which were defined in the parent  constructor)
+
+
+   class Person {
+    public name:string;
+    public age:number;
+    public lastName:string;
+
+
+    constructor(name,age,lastName){
+        this.name = name;
+        this.age = age;
+        this.lastName = lastName;
+    }
+
+    sayHello(){
+        console.log(this);
+    }
+    changeName(){
+        this.name = 'Anna';
+    }
+}
+
+
+const me = new Person('vladi',34,'iokhim');
+me.sayHello();
+
+class Michael extends Person{
+
+}
+
+
+const mich = new Michael('Michael',40,'baba');
+
+mich.sayHello();
+
+class Anna extends Michael{
+    newlastName:string = 'Iokhim';
+ 
+
+    //whould have a consturctor of its own
+    constructor(public isNewLastName:boolean){
+        //get Parent class params(name,age,lastname)
+      super('Anna',34,'gertel')
+    }
+
+}
+
+const ann = new Anna(true);
+
+console.log(ann)

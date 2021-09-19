@@ -1,0 +1,29 @@
+- some times we have function which can work with 2 or more types, and this why 
+union types can be perfect for the job.
+- but whe we are using union types in our functions, we get an error 
+  as the function does not know which type shoud be used 
+- that is why we are using Type guards, to ensure that our code runs correctly 
+  in a run time.
+
+type Combine = string | number;
+
+/**************************************************/
+example: Type Guards using "typeof"
+
+function add(n1:Combine,n2:Combine){
+    if(typeof n1 === 'string' && typeof n2 === 'string'){
+        return n1 + n2;
+    }
+    return n1.toString() + n2.toString();
+}
+/**************************************************/
+
+/**************************************************/
+example: Type Guards - checking if property exists inside an object
+
+if('propertyName' in obj){
+    // do something
+}
+
+
+// when working with classes we can use instanceOf type guard

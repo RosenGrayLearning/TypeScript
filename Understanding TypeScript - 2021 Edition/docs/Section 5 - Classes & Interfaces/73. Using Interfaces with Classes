@@ -1,0 +1,22 @@
+- even though custom (alias) types are similar to an interfaces,
+  in order to define an object, we would often see an interface usage instead of a custom type.
+- also with interfaces, we can define only objects , while custom type can be use for everything.
+- we can implement more then 1 interface
+
+interface Person {
+    name:string;
+    age:number;
+    greeting:(phrase:string) => void;
+}
+
+interface SecondPerson {
+
+}
+
+
+class Per implements Person, SecondPerson {
+    name:string = 'vladi';
+    bla:number = 1;
+    age:number;
+    greeting:() => {};
+}

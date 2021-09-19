@@ -1,0 +1,24 @@
+- providing additional information about the type of data which is being passed 
+  in order to get better support.
+- for example, declaring Promise which will resolve string, in order to get 
+  ts support for the string built in function later on.
+
+examples: 
+
+const people : Array<string> = []; // the same as string[]
+const people : Array<string | number> = [];
+
+
+
+
+
+
+const promise: Promise<string> = new Promise((resolve,reject) => {
+    setTimeout(() => {
+        resolve('he  this is resolved vladi')
+    }, 3000);
+});
+
+promise.then(data=>{
+    console.log(data.length)
+})

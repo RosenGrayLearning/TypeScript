@@ -1,0 +1,12 @@
+- if we have a place in our application (a functions param or constants etc...) where we accept 2 different kinds of value types,
+  we can use Union Types.
+
+  function combine(input1:string | number,input2:string ){
+    return input1 + input2;
+}
+
+
+const age: string | number; 
+
+const arr = ['name','age',33]; // arr: ( string | number)[]
+const arr = ['name','age',33,false]; // arr: ( string | number | boolean)[]

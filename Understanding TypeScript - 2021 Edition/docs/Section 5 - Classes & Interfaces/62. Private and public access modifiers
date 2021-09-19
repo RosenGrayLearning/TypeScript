@@ -1,0 +1,27 @@
+class Person {
+    name : string;
+    private friends:string[] = [];
+
+    constructor(name){
+        this.name = name;
+    }
+
+    callPerson(this:Person):void{
+        console.log(this)
+    }
+    addFriend(friend:string):void{
+        this.friends.push(friend);
+    }
+    printFriends():void{
+        console.log(this.friends);
+    }
+}
+
+const me = new Person('vladik');
+
+
+me.addFriend('johny');
+me.addFriend('bibi');
+me.friends[2] = 'annnnnnna'; // NOT GOOD SINCE OUR FRIENDS PROPERTY IS PRIVATE
+
+me.printFriends();

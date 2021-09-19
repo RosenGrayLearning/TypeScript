@@ -1,0 +1,16 @@
+- in order to set some proeprty as optional, we are using question mark 
+  after property name 
+
+  interface Person {
+    name:string;
+    age:number;
+    lastName?:string;   //this is optional
+}
+
+
+//no error thrown here, 
+const me : Person= {
+    name:'vladi',
+    age: 34
+}
+

@@ -1,0 +1,34 @@
+- if we have multiple decorators, it is important to keep in mind
+  that there are being exuecuted bottom up.
+- like in the following example, in which we see that the useTemplate is 
+  being executed first, then our Logger.
+- but the factories , are being exeucted in order top to bottom.
+          
+
+function Logger(someValue:string){
+    return function(_:Function) {
+        console.log(someValue)
+    }
+}
+
+
+function withTemplate(template:string,hookid:string){
+    return (constructor:any) => {
+        const hookEl = document.getElementById(hookid);
+        const me = new constructor(); // new Person
+       
+        if(hookEl){
+            hookEl.innerHTML = template;
+            hookEl.querySelector('h1')!.textContent = me.name;
+        }
+    }
+}
+@Logger('hello there')
+@withTemplate('<h1>bla</h1>','app') 
+class Person {
+        name: string = 'vladi';
+        constructor(){
+            console.log('creating person');
+        }
+    }
+    

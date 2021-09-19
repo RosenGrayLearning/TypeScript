@@ -1,0 +1,13 @@
+class Person {
+    name : string;
+
+    constructor(name){
+        this.name = name;
+    }
+
+    callPerson(this:Person):void{
+        console.log(this.name + ' aladik')
+    }
+}
+
+const me = new Person('vladik');

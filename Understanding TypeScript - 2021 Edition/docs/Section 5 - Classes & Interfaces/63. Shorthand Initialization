@@ -1,0 +1,35 @@
+- instead of writing class properties in the beginning of the class ,
+  and then initializing them in our class constructor - like  this
+
+
+
+  class Person {
+    private id:number;
+    name : string;
+    age : number
+    private friends:string[] = [];
+
+    constructor(id,name,age){
+        this.id = id;
+        this.name = name;
+        this.age = age;
+    }
+  }
+
+  - we can do this: 
+  
+  class Person {
+
+    constructor(private id:number, public name:string,public age:number){
+
+    }
+
+    sayHello(){
+        console.log(this);
+    }
+}
+
+
+const me = new Person(1,'vladi',34);
+
+me.sayHello();

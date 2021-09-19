@@ -1,0 +1,22 @@
+
+abstract class Person {
+    
+    abstract describePerson(): void;
+}
+
+class Vladi extends Person {
+    name:string = 'vladi';
+    age:number = 34;
+
+
+    describePerson(){
+        console.log(this)
+    }
+
+}
+
+const me = new Vladi();
+
+me.describePerson();
+
+console.log(me)
